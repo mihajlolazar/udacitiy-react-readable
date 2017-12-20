@@ -133,6 +133,7 @@ class Post extends Component {
           this.props.sortCommentsByCreationTimeAsc(this.props.post.id);
           break;
         default:
+          this.props.sortCommentsByVotesDesc(this.props.post.id);
       }
     }
   };

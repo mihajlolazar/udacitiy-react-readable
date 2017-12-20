@@ -27,7 +27,7 @@ class CreatePost extends Component {
   };
 
   componentWillReceiveProps(nextProps){
-    if( nextProps.postAdded ){
+    if( nextProps.postAdded && ( this.props.postAdded !== nextProps.postAdded ) ){
       this.openModal();
     }
   }
