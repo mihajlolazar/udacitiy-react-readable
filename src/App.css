@@ -1,0 +1,302 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin-bottom: 30px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-bottom: 1em;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a,
+.link {
+  color: #5d83f3;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+button,
+textarea,
+select,
+input[type="text"] {
+  background: #fff;
+  border: 1px solid #666;
+  color: #222;
+  padding: 5px 10px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}
+
+input[type="text"],
+textarea {
+  display: block;
+}
+
+select {
+  padding: 5px 10px;
+}
+
+select:hover {
+  cursor: pointer;
+}
+
+label,
+.label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.medium-text {
+  font-size: 0.875rem;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.regular {
+  font-weight: normal;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+.nav-box {
+  background: #000000;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.nav-box a {
+  display: inline-block;
+  margin: 5px 10px;
+  color: #999;
+}
+
+.nav-box  a:hover {
+  color: #fff;
+}
+
+.nav {
+  padding: 5px;
+  float: left;
+}
+
+.nav-list {
+  padding: 5px;
+  float: right;
+}
+
+.nav-list li {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: capitalize;
+}
+
+.post-list-box .post {
+  margin: 0;
+}
+
+.sort-by {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #c5c5c5;
+  padding-bottom: 10px;
+}
+
+.score {
+  font-size: 0.8rem;
+}
+
+.post .score {
+  margin-left: 5px;
+}
+
+.post .vote-box {
+  float: right;
+}
+
+.post-fn {
+  padding-top: 5px;
+  border-top: 1px solid #c7c7c7;
+}
+
+.comment-fn button,
+.post-fn button {
+  margin: 0 5px;
+}
+
+.post-list-item {
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.post-list-item:first-child {
+  margin-top: 0;
+}
+
+.post-list-item:nth-child(even){
+  background: #fbfbfb;
+}
+
+.post-info {
+  margin: 5px 0;
+}
+
+.separator {
+  padding: 0 10px;
+}
+
+.post .title {
+  margin-bottom: 15px;
+}
+
+.post-body {
+  margin-bottom: 20px;
+}
+
+.post-form .row {
+  float: left;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.post-form label {
+  float: left;
+  width: 20%;
+  margin-right: 5%;
+}
+
+.post-form label + * {
+  float: left;
+  width: 75%;
+}
+
+.post-form .submit-row {
+  text-align: right;
+}
+
+.comment-list .comment {
+  padding: 10px;
+  background: #fbfbfb;
+  border-radius: 2px;
+  border: 1px solid #d0d0d0;
+  margin-top: 15px;
+}
+
+.comment-list .comment:first-child {
+  margin-top: 0;
+}
+
+.comment .bottom-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.comment-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.comment-add-form {
+  margin: 35px 0;
+}
+
+.comment-body {
+  margin-bottom: 20px;
+}
+
+.edit-post .post-form {
+  margin-top: 20px;
+}
