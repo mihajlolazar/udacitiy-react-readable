@@ -301,5 +301,6 @@ a:hover {
   margin-top: 20px;
 }
 
-
-
+.comment-author {
+  margin-bottom: 10px;
+}

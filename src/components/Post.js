@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Modal                from 'react-modal'
-import {Link}               from 'react-router-dom'
+import {Link, Route}               from 'react-router-dom'
 import {connect}            from 'react-redux'
 import serializeForm        from 'form-serialize'
 
@@ -8,6 +8,7 @@ import Sort                 from './Sort'
 import Vote                 from './Vote'
 import AddCommentForm       from './AddCommentForm'
 import EditCommentForm      from './EditCommentForm'
+import {PostNotFound}       from './NotFound'
 
 import * as sortType        from '../constants/sort'
 import * as request         from "../utils/request";
@@ -201,6 +202,7 @@ class Post extends Component {
                   else {
                     return (
                       <div key={comment.id} className="comment">
+                        <div className="comment-author medium-text"><strong>{comment.author}:</strong></div>
                         <p className="comment-body">{comment.body}</p>
                         <div className="bottom-box">
                           <div className="comment-data medium-text">
@@ -227,7 +229,9 @@ class Post extends Component {
       )
     }
     else {
-      return null;
+      return (
+        <Route component={PostNotFound} />
+      )
     }
   }
 }

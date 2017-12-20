@@ -46,11 +46,8 @@ class Posts extends Component {
   render() {
    const category = this.props.match.params.category;
 
-   let posts = filterArrayBy(this.props.posts,{property: 'deleted', operator: '===', value: false });
-
-   if( category ){
-     posts = filterArrayBy(posts,{property: 'category', operator: '===', value: category });
-   }
+   let posts  = filterArrayBy(this.props.posts,{property: 'deleted', operator: '===', value: false });
+   posts      = filterArrayBy(posts,{property: 'category', operator: '===', value: category });
 
     if( posts && posts.length ){
       return (
