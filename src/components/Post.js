@@ -93,7 +93,7 @@ class Post extends Component {
       id:         Math.random().toString(36).substr(-20),
       timestamp:  Date.now(),
       body:       data.body,
-      author:     this.props.post.author,
+      author:     data.author,
       parentId:   this.props.post.id
     }).then(() => {
       target.getElementsByTagName('textarea')[0].value = '';
@@ -109,6 +109,7 @@ class Post extends Component {
       id:         data.id,
       timestamp:  Date.now(),
       body:       data.body,
+      author:     data.author,
     }).then(() => {
       this.toggleEditCommentForm({id:data.id,show: false});
     });
@@ -195,7 +196,7 @@ class Post extends Component {
                   if( showEditForm[comment.id] ){
                     return (
                       <div key={comment.id} className="comment edit-comment">
-                        <EditCommentForm onSubmit={this.onEditCommentSubmit} onCancel={() => { this.toggleEditCommentForm({id:comment.id,show:false}) }} id={comment.id} body={comment.body} />
+                        <EditCommentForm onSubmit={this.onEditCommentSubmit} onCancel={() => { this.toggleEditCommentForm({id:comment.id,show:false}) }} comment={comment} />
                       </div>
                     )
                   }

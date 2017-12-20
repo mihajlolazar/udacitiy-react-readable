@@ -16,11 +16,12 @@ const reducerCategories = (state = [], action) => {
 
 const reducerPosts = (state = {}, action) => {
   let post;
+  let result        = action.posts
   const {sortValue} = action;
 
   switch( action.type ){
     case types.GET_POSTS:
-      let result = action.posts.reduce((obj,item) => {
+      result = result.reduce((obj,item) => {
         obj.push(item);
         return obj;
       }, []);
