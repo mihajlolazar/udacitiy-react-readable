@@ -27,7 +27,8 @@ class CreatePost extends Component {
   };
 
   componentWillReceiveProps(nextProps){
-    if( nextProps.postAdded && ( this.props.postAdded !== nextProps.postAdded ) ){
+    // allow user to create multiple posts at once
+    if( nextProps.postAdded /*&& ( this.props.postAdded !== nextProps.postAdded )*/ ){
       this.openModal();
     }
   }

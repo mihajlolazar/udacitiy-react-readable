@@ -3,7 +3,7 @@ The whole installation process ia actually very simple.
 
 For Backend:
   - `git clone https://github.com/udacity/reactnd-project-readable-starter`
-  - `cd api-server`
+  - `cd reactnd-project-readable-starter/api-server`
   - `npm install`
   - `node server`
 
